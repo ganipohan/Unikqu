@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/HP 430/AndroidStudioProjects/Unikqu/app/src/main/res/drawable/round_outline.xml" value="0.19583333333333333" />
-        <entry key="..\:/Users/HP 430/AndroidStudioProjects/Unikqu/app/src/main/res/layout/activity_main.xml" value="0.4735772357723577" />
+        <entry key="..\:/Users/HP 430/AndroidStudioProjects/Unikqu/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/HP 430/AndroidStudioProjects/Unikqu/app/src/main/res/layout/fragment_home.xml" value="0.1675213675213675" />
+        <entry key="..\:/Users/HP 430/AndroidStudioProjects/Unikqu/app/src/main/res/layout/fragment_search.xml" value="0.1675213675213675" />
         <entry key="..\:/Users/HP 430/AndroidStudioProjects/Unikqu/app/src/main/res/menu/menu_main.xml" value="0.1814814814814815" />
       </map>
     </option>

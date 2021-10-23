@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:focusableInTouchMode="true"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="58dp"
+        android:background="@color/colorBackground">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorBackground">
+
+                <ImageView
+                    android:id="@+id/img_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="210dp"
+                    android:background="@color/colorPrimaryDark"
+                    android:contentDescription="@string/app_name"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/img_logo"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/round_outline"
+                    android:contentDescription="@string/app_name"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_logo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:tint="@color/white" />
+
+                <TextView
+                    android:id="@+id/text_logo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/app_name"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/img_logo"
+                    app:layout_constraintStart_toEndOf="@id/img_logo"
+                    app:layout_constraintTop_toTopOf="@id/img_logo" />
+
+                <TextView
+                    android:id="@+id/text_goto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="40dp"
+                    android:shadowColor="@color/colorTextPrimary"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:text="to Go ?"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/img_header"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/text_where"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginBottom="5dp"
+                    android:shadowColor="@color/colorTextPrimary"
+                    android:shadowDx="0"
+                    android:shadowDy="0"
+                    android:shadowRadius="5"
+                    android:text="Where are you want"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/text_goto"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintBottom_toBottomOf="@id/img_header"
+                    app:layout_constraintTop_toBottomOf="@id/img_header">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="4dp"
+                            android:contentDescription="@string/app_name"
+                            android:src="@drawable/ic_location"
+                            app:tint="@color/colorTextHint" />
+
+                        <EditText
+                            android:id="@+id/edt_destination"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@null"
+                            android:hint="Enter your destination"
+                            android:imeOptions="actionSearch"
+                            android:importantForAutofill="no"
+                            android:inputType="text"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="13dp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:id="@+id/img_right_arrow"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:contentDescription="@string/app_name"
+                    android:src="@drawable/ic_keyboard_arrow_right"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card_search"
+                    app:tint="@color/colorTextPrimary" />
+
+                <TextView
+                    android:id="@+id/text_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/img_right_arrow"
+                    app:layout_constraintEnd_toStartOf="@id/img_right_arrow"
+                    app:layout_constraintTop_toTopOf="@id/img_right_arrow" />
+
+                <TextView
+                    android:id="@+id/text_hits_trav"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="Upcoming"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@id/img_right_arrow"
+                    app:layout_constraintEnd_toStartOf="@id/text_all"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/img_right_arrow" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_hits_trav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintTop_toBottomOf="@id/img_right_arrow">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:paddingTop="6dp"
+                        android:paddingBottom="6dp">
+
+                        <TextView
+                            android:id="@+id/text_trav_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="09 Sept, 08:00"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="10dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_to"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="To"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="10dp"
+                            android:textStyle="bold"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/text_trav_date" />
+
+                        <TextView
+                            android:id="@+id/text_name_trav"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gunung Batarawisnu"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="10dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/text_to" />
+
+                        <TextView
+                            android:id="@+id/text_trav_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="18:00"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/text_to2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="To"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="10dp"
+                            android:textStyle="bold"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/text_trav_date" />
+
+                        <TextView
+                            android:id="@+id/text_last_trav"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gunung Dolok Suanon"
+                            android:textColor="@color/colorTextPrimary"
+                            android:textSize="10dp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@id/text_to2" />
+
+                        <!--            <View-->
+                        <!--                android:id="@+id/view_line"-->
+                        <!--                android:layout_width="1.5dp"-->
+                        <!--                android:layout_height="40dp"-->
+                        <!--                android:background="@color/colorTextHint"-->
+                        <!--                app:layout_constraintBottom_toBottomOf="@+id/text_to2"-->
+                        <!--                app:layout_constraintEnd_toStartOf="@id/text_to2"-->
+                        <!--                app:layout_constraintStart_toEndOf="@id/text_to"-->
+                        <!--                app:layout_constraintTop_toTopOf="@id/text_to" />-->
+
+                        <ImageView
+                            android:id="@+id/logo_gunung"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:src="@drawable/ic_gunung"
+                            app:layout_constraintBottom_toBottomOf="@+id/text_to2"
+                            app:layout_constraintEnd_toStartOf="@id/text_to2"
+                            app:layout_constraintStart_toEndOf="@id/text_to"
+                            app:layout_constraintTop_toTopOf="@id/text_to"
+                            app:tint="@color/colorTextPrimary" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/text_popular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="Popular tourist attraction"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/card_hits_trav" />
+
+                <HorizontalScrollView
+                    android:id="@+id/h_scrool"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:clipToPadding="false"
+                    android:overScrollMode="never"
+                    android:paddingStart="15dp"
+                    android:paddingEnd="15dp"
+                    android:scrollbars="none"
+                    app:layout_constraintTop_toBottomOf="@+id/text_popular">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="270dp"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/img1"
+                                android:layout_width="150dp"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/danau"
+                                app:riv_corner_radius="8dp" />
+
+                            <TextView
+                                android:id="@+id/text1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:padding="8dp"
+                                android:shadowColor="@color/colorTextPrimary"
+                                android:shadowDx="0"
+                                android:shadowDy="0"
+                                android:shadowRadius="10"
+                                android:text="Danau Biru"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/img2"
+                                android:layout_width="150dp"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/bali"
+                                app:riv_corner_radius="8dp" />
+
+                            <TextView
+                                android:id="@+id/text2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:padding="8dp"
+                                android:shadowColor="@color/colorTextPrimary"
+                                android:shadowDx="0"
+                                android:shadowDy="0"
+                                android:shadowRadius="10"
+                                android:text="Bali"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/img3"
+                                android:layout_width="150dp"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/mega"
+                                app:riv_corner_radius="8dp" />
+
+                            <TextView
+                                android:id="@+id/text3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:padding="8dp"
+                                android:shadowColor="@color/colorTextPrimary"
+                                android:shadowDx="0"
+                                android:shadowDy="0"
+                                android:shadowRadius="10"
+                                android:text="Danau Silangit"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/img4"
+                                android:layout_width="150dp"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/paris"
+                                app:riv_corner_radius="8dp" />
+
+                            <TextView
+                                android:id="@+id/text4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:padding="8dp"
+                                android:shadowColor="@color/colorTextPrimary"
+                                android:shadowDx="0"
+                                android:shadowDy="0"
+                                android:shadowRadius="10"
+                                android:text="Paris"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="10dp">
+
+                            <com.makeramen.roundedimageview.RoundedImageView
+                                android:id="@+id/img5"
+                                android:layout_width="150dp"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/air_mancur"
+                                app:riv_corner_radius="8dp" />
+
+                            <TextView
+                                android:id="@+id/text5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:padding="8dp"
+                                android:shadowColor="@color/colorTextPrimary"
+                                android:shadowDx="0"
+                                android:shadowDy="0"
+                                android:shadowRadius="10"
+                                android:text="Air tejun Situju"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="13dp"
+                                android:textStyle="bold" />
+
+                        </FrameLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <TextView
+                    android:id="@+id/text_recent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="15dp"
+                    android:text="Recently Visit"
+                    android:textColor="@color/colorTextPrimary"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/h_scrool" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_recent1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/text_recent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/loingxiang" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_id"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tv_nama"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:text="Eiffel Paris"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/tv_alamat"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:minLines="1"
+                                android:text="Champ de Mars, 5 Av. Anatole France, 75007 Paris, Prancis"
+                                android:textSize="15dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_recent2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="5dp"
+                    app:cardCornerRadius="15dp"
+                    app:cardElevation="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/card_recent1">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/sawah" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginRight="6dp"
+                            android:layout_marginBottom="8dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:minLines="1"
+                                android:text="Aek Nabonggal"
+                                android:textColor="@color/black"
+                                android:textSize="15dp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:minLines="1"
+                                android:text="Tapus Dolok, Desa tapus sipagabu, Kec.Aek Bilah"
+                                android:textSize="15dp" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
